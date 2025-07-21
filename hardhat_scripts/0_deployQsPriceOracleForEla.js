@@ -6,7 +6,7 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   // 获取 WELA 地址，这个需要根据实际网络来设置
-  const WELA_ADDRESS = await readConfig(network.name, "ETH"); // 请替换为实际的 WELA 地址
+  const WELA_ADDRESS = await readConfig(network.name, "ELA"); // 请替换为实际的 WELA 地址
   console.log("WELA_ADDRESS", WELA_ADDRESS);
 
   // 部署 QsPriceOracleForEla

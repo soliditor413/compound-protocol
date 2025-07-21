@@ -13,7 +13,7 @@ async function main() {
   const DECIMALS = 8; // 设置价格精度为8位小数
   const DESCRIPTION = "ELA Asset Oracle"; // 预言机描述
   const BASE_ORACLE_ADDRESS = await readConfig(network.name, "ASSET_ORACLE"); // 需要替换为实际的 QsPriceOracleForEla 地址
-  const ASSET_ADDRESS = await readConfig(network.name, "ETH"); // 需要替换为实际的资产地址
+  const ASSET_ADDRESS = await readConfig(network.name, "ELA"); // 需要替换为实际的资产地址
 
   // 部署合约
   console.log("Deploying QsElaAssetOracle...");
