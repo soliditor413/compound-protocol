@@ -30,6 +30,10 @@ module.exports = {
       url: testnetURL,
       accounts: [...(staging_key ? [staging_key] : [])]
     },
+    pgp_testnet: {
+      url: "https://api-testnet.elastos.io/pgp",
+      accounts: [...(staging_key ? [staging_key, staging_key] : [])],
+    },
     mainNet: {
       url: mainNetURL,
     },
@@ -41,7 +45,9 @@ module.exports = {
   etherscan: {
     apiKey: {
       'testnet': 'empty',
-      'mainNet': 'empty'
+      'mainNet': 'empty',
+      'pgp_testnet': 'empty',
+      'pgp_mainnet': 'empty',
     },
     customChains: [
       {
@@ -58,6 +64,14 @@ module.exports = {
         urls: {
           apiURL: "https://esc.elastos.io:443/api",
           browserURL: "https://esc.elastos.io:443"
+        }
+      },
+      {
+        network: "pgp_testnet",
+        chainId: 12345,
+        urls: {
+          apiURL: "https://pgp-testnet.elastos.io:443/api",
+          browserURL: "https://pgp-testnet.elastos.io:443"
         }
       },
     ]
